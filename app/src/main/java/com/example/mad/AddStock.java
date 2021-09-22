@@ -41,7 +41,7 @@ public class AddStock extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(AddStock.this, MainActivity.class);
+                Intent intent1 = new Intent(AddStock.this, Home.class);
                 startActivity(intent1);
             }
         });
