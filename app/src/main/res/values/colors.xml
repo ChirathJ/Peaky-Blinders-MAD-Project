@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffdc8a</color>
+    <color name="colorBar">#ffc847</color>
+    <color name="black">#000000</color>
+    <color name="White">#ffffff</color>
+    <color name="textbox">#F9A75F</color>
+    <color name="det">#5b5b5b</color>
+</resources>
