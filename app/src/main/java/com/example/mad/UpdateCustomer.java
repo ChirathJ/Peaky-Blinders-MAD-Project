@@ -1,0 +1,76 @@
+package com.example.mad;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.textfield.TextInputEditText;
+
+public class UpdateCustomer extends AppCompatActivity {
+
+    TextView customerIDd;
+    TextInputEditText upName1, upEmail1, upPhone1, upJoinedDate1;
+    ImageButton update_button, back_button;
+
+    String customerID, customerName, customerEmail, customerPhone, customerJoinedDate;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_update_customer);
+
+        customerIDd = findViewById(R.id.customerID);
+        upName1 = findViewById(R.id.upName1);
+        upEmail1 = findViewById(R.id.upEmail1);
+        upPhone1 = findViewById(R.id.upPhone1);
+        upJoinedDate1 = findViewById(R.id.upJoinedDate1);
+        update_button = findViewById(R.id.update_button);
+        back_button = findViewById(R.id.back_button);
+
+        getAndSetIntentData();
+
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                finish();
+            }
+        });
+
+
+        update_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                MyDatabaseHelper myDB = new MyDatabaseHelper(UpdateCustomer.this);
+                myDB.updateData(customerID,upName1.getText().toString().trim(),
+                        upEmail1.getText().toString().trim(),
+                        upPhone1.getText().toString().trim(),
+                        upJoinedDate1.getText().toString().trim());
+            }
+        });
+
+    }
+    void getAndSetIntentData(){
+        if(getIntent().hasExtra("id") && getIntent().hasExtra("name") &&
+                getIntent().hasExtra("email") && getIntent().hasExtra("phone") && getIntent().hasExtra("joineddate")){
+            //Getting Data from Intent
+            customerID = getIntent().getStringExtra("id");
+            customerName = getIntent().getStringExtra("name");
+            customerEmail = getIntent().getStringExtra("email");
+            customerPhone = getIntent().getStringExtra("phone");
+            customerJoinedDate = getIntent().getStringExtra("joineddate");
+
+            //Setting Intent Data
+            customerIDd.setText(customerID);
+            upName1.setText(customerName);
+            upEmail1.setText(customerEmail);
+            upPhone1.setText(customerPhone);
+            upJoinedDate1.setText(customerJoinedDate);
+        }else{
+            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+        }
+    }
+}

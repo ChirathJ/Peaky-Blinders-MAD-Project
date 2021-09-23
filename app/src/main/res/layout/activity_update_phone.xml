@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     tools:context=".MainActivity"
+    android:background="@color/colorPrimary"
     tools:ignore="ExtraText">
 
 
@@ -48,7 +48,7 @@
             android:layout_height="44dp"
             android:layout_marginStart="90dp"
             android:layout_marginTop="30dp"
-            android:text="@string/update_quantity"
+            android:text="@string/update_phone"
             android:textColor="@android:color/black"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -65,7 +65,7 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/products" />
+            app:srcCompat="@drawable/cus6" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -97,19 +97,19 @@
                         android:layout_weight="1"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_StockID"
+                        android:text="@string/customer_Details_CustomerID"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/stockIDdup"
+                        android:id="@+id/customerIDdup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginEnd="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_StockID_data"
+                        android:text="@string/customer_Details_CustomerID_data"
                         android:textAlignment="viewEnd"
                         android:textColor="#5b5b5b"
                         android:textSize="20sp" />
@@ -138,19 +138,19 @@
                         android:layout_weight="1"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_Name"
+                        android:text="@string/customer_Details_Name"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/stockNamedup"
+                        android:id="@+id/customerNamedup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginEnd="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_Name_data"
+                        android:text="@string/customer_Details_Name_data"
                         android:textAlignment="viewEnd"
                         android:textColor="@color/det"
                         android:textSize="20sp" />
@@ -171,11 +171,11 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/Quantity"
+                        android:id="@+id/Phone"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/quantity_entry"
+                        android:hint="@string/phone_entry"
                         app:hintTextAppearance="@style/TextLabel"
                         app:boxBackgroundColor="@color/textbox"
                         app:boxStrokeColor="@color/black"
@@ -186,10 +186,10 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/upquantityentry"
+                            android:id="@+id/upphoneentry"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/quantity_entry_edit" />
+                            android:text="@string/phone_entry_edit" />
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>

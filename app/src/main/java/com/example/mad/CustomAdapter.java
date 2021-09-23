@@ -15,49 +15,50 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import java.util.ArrayList;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     private Context context;
     private Activity activity;
-    private ArrayList stockID, stockName, stockCategory, stockQuantity, stockUnitPrice;
+    private ArrayList customerID, customerName, customerEmail, customerPhone, customerJoinedDate;
 
-    CustomAdapter(Activity activity, Context context, ArrayList stockID, ArrayList stockName, ArrayList stockCategory, ArrayList stockQuantity,
-                  ArrayList stockUnitPrice) {
+    CustomAdapter(Activity activity, Context context, ArrayList customerID, ArrayList customerName, ArrayList customerEmail, ArrayList customerPhone,
+                  ArrayList customerJoinedDate) {
         this.activity = activity;
         this.context = context;
-        this.stockID = stockID;
-        this.stockName = stockName;
-        this.stockCategory = stockCategory;
-        this.stockQuantity = stockQuantity;
-        this.stockUnitPrice = stockUnitPrice;
+        this.customerID = customerID;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhone = customerPhone;
+        this.customerJoinedDate = customerJoinedDate;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.my_row, parent, false);
+        View view = inflater.inflate(R.layout.row, parent, false);
         return new MyViewHolder(view);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-        holder.stock_id_txt.setText(String.valueOf(stockID.get(position)));
-        holder.stock_name_txt.setText(String.valueOf(stockName.get(position)));
-        holder.stock_category_txt.setText(String.valueOf(stockCategory.get(position)));
-        holder.stock_quantity_txt.setText(String.valueOf(stockQuantity.get(position)));
+        holder.customer_id_txt.setText(String.valueOf(customerID.get(position)));
+        holder.customer_name_txt.setText(String.valueOf(customerName.get(position)));
+        holder.customer_email_txt.setText(String.valueOf(customerEmail.get(position)));
+        holder.customer_phone_txt.setText(String.valueOf(customerPhone.get(position)));
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, DetailsStock.class);
-                intent.putExtra("id", String.valueOf(stockID.get(position)));
-                intent.putExtra("name", String.valueOf(stockName.get(position)));
-                intent.putExtra("category", String.valueOf(stockCategory.get(position)));
-                intent.putExtra("quantity", String.valueOf(stockQuantity.get(position)));
-                intent.putExtra("unitprice", String.valueOf(stockUnitPrice.get(position)));
+                Intent intent = new Intent(context, DetailsCustomer.class);
+                intent.putExtra("id", String.valueOf(customerID.get(position)));
+                intent.putExtra("name", String.valueOf(customerName.get(position)));
+                intent.putExtra("email", String.valueOf(customerEmail.get(position)));
+                intent.putExtra("phone", String.valueOf(customerPhone.get(position)));
+                intent.putExtra("joineddate",String.valueOf(customerJoinedDate.get(position)));
                 activity.startActivityForResult(intent, 1);
             }
         });
@@ -65,20 +66,19 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @Override
     public int getItemCount() {
-        return stockID.size();
+        return customerID.size();
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView stock_id_txt, stock_name_txt, stock_category_txt, stock_quantity_txt;
+        TextView customer_id_txt, customer_name_txt, customer_email_txt, customer_phone_txt;
         LinearLayout mainLayout;
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            stock_id_txt = itemView.findViewById(R.id.stock_id_txt);
-            stock_name_txt = itemView.findViewById(R.id.stock_name_txt);
-            stock_category_txt = itemView.findViewById(R.id.stock_category_txt);
-            stock_quantity_txt = itemView.findViewById(R.id.stock_quantity_txt);
+            customer_id_txt = itemView.findViewById(R.id.customer_id_txt);
+            customer_name_txt = itemView.findViewById(R.id.customer_name_txt);
+            customer_phone_txt = itemView.findViewById(R.id.customer_phone_txt);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
 

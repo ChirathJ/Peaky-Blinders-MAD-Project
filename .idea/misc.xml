@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hasal/Downloads/Peaky-Blinders-MAD-Projectcustomer/app/src/main/res/layout/activity_add_customer.xml" value="0.22" />
+        <entry key="..\:/Users/Hasal/Downloads/Peaky-Blinders-MAD-Projectcustomer/app/src/main/res/layout/activity_details_customer.xml" value="0.18" />
+        <entry key="..\:/Users/Hasal/Downloads/Peaky-Blinders-MAD-Projectcustomer/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/Hasal/Downloads/Peaky-Blinders-MAD-Projectcustomer/app/src/main/res/layout/activity_update_customer.xml" value="0.22" />
+        <entry key="..\:/Users/Hasal/Downloads/Peaky-Blinders-MAD-Projectcustomer/app/src/main/res/layout/activity_update_phone.xml" value="0.22" />
+        <entry key="..\:/Users/Hasal/Downloads/Peaky-Blinders-MAD-Projectcustomer/app/src/main/res/layout/row.xml" value="0.18" />
         <entry key="..\:/Users/JAY/Desktop/last/app/src/main/res/layout/activity_add_stock.xml" value="0.2" />
         <entry key="..\:/Users/JAY/Desktop/last/app/src/main/res/layout/activity_details_stock.xml" value="0.16" />
         <entry key="..\:/Users/JAY/Desktop/last/app/src/main/res/layout/activity_update_quantity.xml" value="0.1440677966101695" />

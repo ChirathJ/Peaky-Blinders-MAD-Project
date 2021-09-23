@@ -13,16 +13,16 @@
             android:name=".Home"
             android:exported="true" />
         <activity
-            android:name=".UpdateQuantity"
+            android:name=".UpdatePhone"
             android:exported="true" />
         <activity
-            android:name=".DetailsStock"
+            android:name=".DetailsCustomer"
             android:exported="true" />
         <activity
-            android:name=".UpdateStock"
+            android:name=".UpdateCustomer"
             android:exported="true" />
         <activity
-            android:name=".AddStock"
+            android:name=".AddCustomer"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

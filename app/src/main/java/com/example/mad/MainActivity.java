@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash);
+        setContentView(R.layout.activity_add_customer);
 
         int secondsDelayed = 1;
         new Handler().postDelayed(new Runnable() {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, secondsDelayed * 1500);
-            }
+    }
 
 
 }
