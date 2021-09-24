@@ -14,8 +14,8 @@
 
         <View
             android:id="@+id/topView"
-            android:layout_width="0dp"
-            android:layout_height="280dp"
+            android:layout_width="409dp"
+            android:layout_height="223dp"
             android:background="@color/colorBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -52,8 +52,8 @@
 
         <ImageView
             android:id="@+id/imageV5"
-            android:layout_width="192dp"
-            android:layout_height="177dp"
+            android:layout_width="131dp"
+            android:layout_height="110dp"
             android:layout_marginTop="90dp"
             android:contentDescription="@string/top_icon"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,21 +62,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/products" />
 
-        <ScrollView
-            android:id="@+id/scrollView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="230dp"
+                android:layout_marginTop="240dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/white_background"
                 android:orientation="vertical"
@@ -305,13 +296,12 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/details12"
+                        android:id="@+id/stockTotalPriced"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginEnd="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_total_data"
                         android:textAlignment="viewEnd"
                         android:textColor="#5b5b5b"
                         android:textSize="20sp" />
@@ -369,8 +359,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-        </ScrollView>
-
 
         <LinearLayout
             android:id="@+id/linearLayout2"

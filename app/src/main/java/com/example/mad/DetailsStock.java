@@ -16,10 +16,11 @@ import android.widget.Toast;
 
 public class DetailsStock extends AppCompatActivity {
 
-    TextView stockIDd, stockNamed, stockCategoryd, stockQuantityd, stockUnitPriced;
+    TextView stockIDd, stockNamed, stockCategoryd, stockQuantityd, stockUnitPriced, stockTotalPriced;
     ImageButton update_button, updatestock_button, delete_button, back_button;
 
     String stockID, stockName, stockCategory, stockQuantity, stockUnitPrice;
+    int stockTotalPrice;
 
 
     @Override
@@ -32,6 +33,7 @@ public class DetailsStock extends AppCompatActivity {
         stockCategoryd = findViewById(R.id.stockCategoryd);
         stockQuantityd = findViewById(R.id.stockQuantityd);
         stockUnitPriced = findViewById(R.id.stockUnitPriced);
+        stockTotalPriced = findViewById(R.id.stockTotalPriced);
         update_button = findViewById(R.id.update_button);
         delete_button = findViewById(R.id.delete_button);
         back_button = findViewById(R.id.back_button);
@@ -91,12 +93,16 @@ public class DetailsStock extends AppCompatActivity {
             stockQuantity = getIntent().getStringExtra("quantity");
             stockUnitPrice = getIntent().getStringExtra("unitprice");
 
+            //calculation
+            stockTotalPrice = Integer.parseInt(stockQuantity)*Integer.parseInt(stockUnitPrice);;
+
             //Setting Intent Data
             stockIDd.setText(stockID);
             stockNamed.setText(stockName);
             stockCategoryd.setText(stockCategory);
             stockQuantityd.setText(stockQuantity);
             stockUnitPriced.setText(stockUnitPrice);
+            stockTotalPriced.setText(String.valueOf(stockTotalPrice));
         }else{
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }

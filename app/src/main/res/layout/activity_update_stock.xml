@@ -21,7 +21,7 @@
         <View
             android:id="@+id/topView"
             android:layout_width="0dp"
-            android:layout_height="280dp"
+            android:layout_height="223dp"
             android:background="@color/colorBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -57,8 +57,8 @@
 
         <ImageView
             android:id="@+id/imageV5"
-            android:layout_width="192dp"
-            android:layout_height="177dp"
+            android:layout_width="131dp"
+            android:layout_height="110dp"
             android:layout_marginTop="90dp"
             android:contentDescription="@string/top_icon"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="290dp"
+                android:layout_marginTop="240dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/white_background"
                 android:orientation="vertical"

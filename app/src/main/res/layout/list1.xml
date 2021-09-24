@@ -53,33 +53,34 @@
 
     <RelativeLayout
         android:id="@+id/r1"
-        android:layout_width="362dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/search_bg"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        app:boxBackgroundColor="@color/textbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="20dp"
-            android:contentDescription="@string/search"
-            android:src="@drawable/search_img"
-            tools:ignore="ImageContrastCheck" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/listSearch"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="55dp"
-            android:text="@string/search"
-            android:textColor="#03082b"
-            android:textSize="18sp" />//search
+            android:hint="@string/search"
+            app:hintTextAppearance="@style/TextLabel"
+            app:boxBackgroundColor="@color/textbox"
+            app:boxStrokeColor="@color/black"
+            app:color="@color/black"
+            app:hintTextColor="@color/black">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/listSearch1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>//search
 
 
     </RelativeLayout>
@@ -88,7 +89,7 @@
         android:layout_width="390dp"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:orientation="vertical"
         android:background="@drawable/white_background"

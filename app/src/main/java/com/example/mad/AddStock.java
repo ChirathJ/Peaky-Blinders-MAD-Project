@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -13,13 +15,17 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class AddStock extends AppCompatActivity {
 
-    TextInputEditText stockName, stockCategory, stockQuantity, stockUnitPrice;
+    TextInputEditText stockName, stockQuantity, stockUnitPrice;
     ImageButton save_button, back_button;
+    AutoCompleteTextView stockCategory;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_stock);
+
+
 
         stockName = findViewById(R.id.stockName1);
         stockCategory = findViewById(R.id.stockCategory1);
@@ -37,6 +43,18 @@ public class AddStock extends AppCompatActivity {
                         Integer.parseInt(stockQuantity.getText().toString().trim()));
             }
         });
+
+        String[] type = new String[] {"Food", "Chemicals", "Cleaning Equipment", "Pharmaceuticals"};
+
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<>(
+                        this,
+                        R.layout.dropdown,
+                        type);
+
+        AutoCompleteTextView editTextFilledExposedDropdown =
+                findViewById(R.id.stockCategory1);
+        editTextFilledExposedDropdown.setAdapter(adapter);
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override

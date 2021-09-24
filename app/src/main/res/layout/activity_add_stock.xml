@@ -11,7 +11,7 @@
         <View
             android:id="@+id/topView"
             android:layout_width="0dp"
-            android:layout_height="280dp"
+            android:layout_height="223dp"
             android:background="@color/colorBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -48,8 +48,8 @@
 
         <ImageView
             android:id="@+id/imageV5"
-            android:layout_width="192dp"
-            android:layout_height="177dp"
+            android:layout_width="131dp"
+            android:layout_height="110dp"
             android:layout_marginTop="90dp"
             android:contentDescription="@string/top_icon"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="290dp"
+                android:layout_marginTop="240dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/white_background"
                 android:orientation="vertical"
@@ -119,27 +119,30 @@
                     android:layout_marginBottom="5dp"
                     android:orientation="horizontal">
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/stockCategory"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/category_entry"
-                        app:hintTextAppearance="@style/TextLabel"
-                        app:boxBackgroundColor="@color/textbox"
-                        app:boxStrokeColor="@color/black"
-                        app:color="@color/black"
-                        app:hintTextColor="@color/black"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/stockCategory1"
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/stockCategory"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:hint="@string/category_entry"
+                            app:hintTextAppearance="@style/TextLabel"
+                            app:boxBackgroundColor="@color/textbox"
+                            app:boxStrokeColor="@color/black"
+                            app:color="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                            <AutoCompleteTextView
+                                android:id="@+id/stockCategory1"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:layout_weight="1"
+                                android:inputType="none"
+                                tools:ignore="LabelFor" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatImageView
