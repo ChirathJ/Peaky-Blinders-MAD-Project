@@ -13,15 +13,15 @@ import androidx.annotation.Nullable;
 class MyDatabaseHelper extends SQLiteOpenHelper {
 
     private Context context;
-    private static final String DATABASE_NAME = "Inventory.db";
+    private static final String DATABASE_NAME = "Supplier.db";
     private static final int DATABASE_VERSION = 1;
 
-    private static final String TABLE_NAME = "Stock";
+    private static final String TABLE_NAME = "Supplier";
     private static final String COLUMN_ID = "_id";
-    private static final String COLUMN_NAME = "stockName";
-    private static final String COLUMN_CATEGORY = "stockCategory";
-    private static final String COLUMN_Quantity = "stockQuantity";
-    private static final String COLUMN_UNIT_PRICE = "stockUnitPrice";
+    private static final String COLUMN_NAME = "supplierName";
+    private static final String COLUMN_ADDRESS = "supplierAddress";
+    private static final String COLUMN_EMAIL = "supplierEmail";
+    private static final String COLUMN_PHONE = "supplierPhone";
 
     MyDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -33,9 +33,9 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME +
                 " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_NAME + " TEXT, " +
-                COLUMN_CATEGORY + " TEXT, " +
-                COLUMN_Quantity + " INTEGER, " +
-                COLUMN_UNIT_PRICE + " INTEGER);";
+                COLUMN_ADDRESS + " TEXT, " +
+                COLUMN_EMAIL + " TEXT, " +
+                COLUMN_PHONE + " INTEGER);";
         db.execSQL(query);
     }
 
@@ -45,14 +45,14 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    void addStock(String name, String category, int quantity, int unitPrice){
+    void addSupplier(String name, String address, String email, int phone){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
         cv.put(COLUMN_NAME, name);
-        cv.put(COLUMN_CATEGORY, category);
-        cv.put(COLUMN_Quantity, quantity);
-        cv.put(COLUMN_UNIT_PRICE, unitPrice);
+        cv.put(COLUMN_ADDRESS, address);
+        cv.put(COLUMN_EMAIL, email);
+        cv.put(COLUMN_PHONE, phone);
         long result = db.insert(TABLE_NAME,null, cv);
         if(result == -1){
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
@@ -72,13 +72,13 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    void updateData(String row_id, String name, String category, int quantity, int unitPrice){
+    void updateData(String row_id, String name, String address, String email, int phone){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_NAME, name);
-        cv.put(COLUMN_CATEGORY, category);
-        cv.put(COLUMN_Quantity, quantity);
-        cv.put(COLUMN_UNIT_PRICE, unitPrice);
+        cv.put(COLUMN_ADDRESS, address);
+        cv.put(COLUMN_EMAIL, email);
+        cv.put(COLUMN_PHONE, phone);
 
         long result = db.update(TABLE_NAME, cv, "_id=?", new String[]{row_id});
         if(result == -1){

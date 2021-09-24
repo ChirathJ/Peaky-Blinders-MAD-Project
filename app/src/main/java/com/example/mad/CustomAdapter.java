@@ -21,17 +21,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     private Context context;
     private Activity activity;
-    private ArrayList stockID, stockName, stockCategory, stockQuantity, stockUnitPrice;
+    private ArrayList supplierID, supplierName, supplierAddress, supplierEmail, supplierPhone;
 
-    CustomAdapter(Activity activity, Context context, ArrayList stockID, ArrayList stockName, ArrayList stockCategory, ArrayList stockQuantity,
-                  ArrayList stockUnitPrice) {
+    CustomAdapter(Activity activity, Context context, ArrayList supplierID, ArrayList supplierName, ArrayList supplierAddress, ArrayList supplierEmail,
+                  ArrayList supplierPhone) {
         this.activity = activity;
         this.context = context;
-        this.stockID = stockID;
-        this.stockName = stockName;
-        this.stockCategory = stockCategory;
-        this.stockQuantity = stockQuantity;
-        this.stockUnitPrice = stockUnitPrice;
+        this.supplierID = supplierID;
+        this.supplierName = supplierName;
+        this.supplierAddress = supplierAddress;
+        this.supplierEmail = supplierEmail;
+        this.supplierPhone = supplierPhone;
     }
 
     @NonNull
@@ -45,19 +45,21 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-        holder.stock_id_txt.setText(String.valueOf(stockID.get(position)));
-        holder.stock_name_txt.setText(String.valueOf(stockName.get(position)));
-        holder.stock_category_txt.setText(String.valueOf(stockCategory.get(position)));
-        holder.stock_quantity_txt.setText(String.valueOf(stockQuantity.get(position)));
+        holder.supplier_id_txt.setText(String.valueOf(supplierID.get(position)));
+        holder.supplier_name_txt.setText(String.valueOf(supplierName.get(position)));
+        holder.supplier_address_txt.setText(String.valueOf(supplierAddress.get(position)));
+        holder.supplier_email_txt.setText(String.valueOf(supplierEmail.get(position)));
+        holder.supplier_phone_txt.setText(String.valueOf(supplierPhone.get(position)));
+
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, DetailsStock.class);
-                intent.putExtra("id", String.valueOf(stockID.get(position)));
-                intent.putExtra("name", String.valueOf(stockName.get(position)));
-                intent.putExtra("category", String.valueOf(stockCategory.get(position)));
-                intent.putExtra("quantity", String.valueOf(stockQuantity.get(position)));
-                intent.putExtra("unitprice", String.valueOf(stockUnitPrice.get(position)));
+                Intent intent = new Intent(context, DetailsSupplier.class);
+                intent.putExtra("id", String.valueOf(supplierID.get(position)));
+                intent.putExtra("name", String.valueOf(supplierName.get(position)));
+                intent.putExtra("address", String.valueOf(supplierAddress.get(position)));
+                intent.putExtra("email", String.valueOf(supplierEmail.get(position)));
+                intent.putExtra("phone", String.valueOf(supplierPhone.get(position)));
                 activity.startActivityForResult(intent, 1);
             }
         });
@@ -65,20 +67,19 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @Override
     public int getItemCount() {
-        return stockID.size();
+        return supplierID.size();
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView stock_id_txt, stock_name_txt, stock_category_txt, stock_quantity_txt;
+        TextView supplier_id_txt, supplier_name_txt, supplier_address_txt, supplier_email_txt, supplier_phone_txt;
         LinearLayout mainLayout;
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            stock_id_txt = itemView.findViewById(R.id.stock_id_txt);
-            stock_name_txt = itemView.findViewById(R.id.stock_name_txt);
-            stock_category_txt = itemView.findViewById(R.id.stock_category_txt);
-            stock_quantity_txt = itemView.findViewById(R.id.stock_quantity_txt);
+            supplier_id_txt = itemView.findViewById(R.id.supplier_id_txt);
+            supplier_name_txt = itemView.findViewById(R.id.supplier_name_txt);
+            supplier_address_txt = itemView.findViewById(R.id.supplier_address_txt);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
 

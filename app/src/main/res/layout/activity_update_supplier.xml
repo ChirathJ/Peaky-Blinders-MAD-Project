@@ -48,7 +48,7 @@
             android:layout_height="44dp"
             android:layout_marginStart="90dp"
             android:layout_marginTop="30dp"
-            android:text="@string/update_quantity"
+            android:text="Edit Supplier Details"
             android:textColor="@android:color/black"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -65,7 +65,7 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/products" />
+            app:srcCompat="@drawable/supplier" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -79,7 +79,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -97,19 +96,19 @@
                         android:layout_weight="1"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_StockID"
+                        android:text="Supplier ID:"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/stockIDdup"
+                        android:id="@+id/supplierID"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginEnd="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_StockID_data"
+                        android:text="S007"
                         android:textAlignment="viewEnd"
                         android:textColor="#5b5b5b"
                         android:textSize="20sp" />
@@ -119,63 +118,23 @@
                     android:id="@+id/appCompatImageView2"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_margin="12dp"
-                    android:alpha="0.5"
-                    android:background="#585858" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/cv1"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/details3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_Name"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/stockNamedup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_Name_data"
-                        android:textAlignment="viewEnd"
-                        android:textColor="@color/det"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/appCompatImageView1"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="12dp"
                     android:alpha="0.5"
                     android:background="#585858" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/Quantity"
+                        android:id="@+id/upName"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/quantity_entry"
+                        android:hint="@string/name_entry"
                         app:hintTextAppearance="@style/TextLabel"
                         app:boxBackgroundColor="@color/textbox"
                         app:boxStrokeColor="@color/black"
@@ -186,10 +145,10 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/upquantityentry"
+                            android:id="@+id/upName1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/quantity_entry_edit" />
+                            android:text="@string/name_entry_edit" />
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -201,6 +160,122 @@
                     android:alpha="0.5"
                     android:background="#585858" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/upAddress"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        app:hintTextAppearance="@style/TextLabel"
+                        app:boxBackgroundColor="@color/textbox"
+                        app:boxStrokeColor="@color/black"
+                        app:color="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/upAddress1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No1,Colombo,04" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.5"
+                    android:background="#585858" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/upQuantity"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        app:hintTextAppearance="@style/TextLabel"
+                        app:boxBackgroundColor="@color/textbox"
+                        app:boxStrokeColor="@color/black"
+                        app:color="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/upEmail1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:text="kothmale@gmail.com" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.5"
+                    android:background="#585858" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/upUnitPrice"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone"
+                        app:hintTextAppearance="@style/TextLabel"
+                        app:boxBackgroundColor="@color/textbox"
+                        app:boxStrokeColor="@color/black"
+                        app:color="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/upPhone1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:text="0112646969" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.5"
+                    android:background="#585858" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -209,7 +284,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/save_button"
+                        android:id="@+id/update_button"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="5dp"

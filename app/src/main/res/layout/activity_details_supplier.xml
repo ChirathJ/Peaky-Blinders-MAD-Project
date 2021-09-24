@@ -43,7 +43,7 @@
             android:layout_height="44dp"
             android:layout_marginStart="90dp"
             android:layout_marginTop="30dp"
-            android:text="@string/stock_details"
+            android:text="Supplier Details"
             android:textColor="@android:color/black"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -60,7 +60,7 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/products" />
+            app:srcCompat="@drawable/supplier" />
 
         <ScrollView
             android:id="@+id/scrollView2"
@@ -101,13 +101,13 @@
                         android:layout_weight="1"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_StockID"
+                        android:text="Supplier ID:"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/stockIDd"
+                        android:id="@+id/supplierIDd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -141,13 +141,13 @@
                         android:layout_weight="1"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_Name"
+                        android:text="Name:"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/stockNamed"
+                        android:id="@+id/supplierNamed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -181,13 +181,13 @@
                         android:layout_weight="1"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_Category"
+                        android:text="Address:"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/stockCategoryd"
+                        android:id="@+id/supplierAddressd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -221,13 +221,13 @@
                         android:layout_weight="1"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_Quantity"
+                        android:text="Email:"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/stockQuantityd"
+                        android:id="@+id/supplierEmaild"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -260,13 +260,13 @@
                         android:layout_weight="1"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_Unit"
+                        android:text="Phone:"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/stockUnitPriced"
+                        android:id="@+id/supplierPhoned"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -299,7 +299,7 @@
                         android:layout_weight="1"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_Total"
+                        android:text="Postal Code:"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -311,7 +311,7 @@
                         android:layout_weight="1"
                         android:layout_marginEnd="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/Stock_Details_total_data"
+                        android:text="1000"
                         android:textAlignment="viewEnd"
                         android:textColor="#5b5b5b"
                         android:textSize="20sp" />
@@ -339,20 +339,20 @@
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:background="@null"
-                        android:contentDescription="@string/edit_heading" />
+                        android:contentDescription="Edit Supplier Details" />
 
                     <ImageButton
-                        android:id="@+id/updatestock_button"
+                        android:id="@+id/updatesupplier_button"
                         android:layout_width="50dp"
                         android:layout_height="55dp"
                         android:autofillHints="emailAddress"
                         android:layout_gravity="start"
                         android:layout_weight="1.0"
-                        android:src="@drawable/addstock"
+                        android:src="@drawable/company3"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:background="@null"
-                        android:contentDescription="@string/add_quantity" />
+                        android:contentDescription="Add Supplier" />
 
                     <ImageButton
                         android:id="@+id/delete_button"
@@ -364,7 +364,7 @@
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:background="@null"
-                        android:contentDescription="@string/delete_stock" />
+                        android:contentDescription="Delete_supplier" />
 
                 </LinearLayout>
 
