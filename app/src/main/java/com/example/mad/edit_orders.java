@@ -2,6 +2,7 @@ package com.example.mad;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -36,7 +37,8 @@ public class edit_orders extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
-                finish();
+                Intent intent1 = new Intent(edit_orders.this, MainActivity.class);
+                startActivity(intent1);
             }
         });
 
