@@ -17,7 +17,7 @@ import android.widget.Toast;
 public class DetailsStock extends AppCompatActivity {
 
     TextView stockIDd, stockNamed, stockCategoryd, stockQuantityd, stockUnitPriced, stockTotalPriced;
-    ImageButton update_button, updatestock_button, delete_button, back_button;
+    ImageButton update_button, updatestock_button, delete_button, back_button, stock, cus, oders, sup;
 
     String stockID, stockName, stockCategory, stockQuantity, stockUnitPrice;
     int stockTotalPrice;
@@ -34,6 +34,10 @@ public class DetailsStock extends AppCompatActivity {
         stockQuantityd = findViewById(R.id.stockQuantityd);
         stockUnitPriced = findViewById(R.id.stockUnitPriced);
         stockTotalPriced = findViewById(R.id.stockTotalPriced);
+        stock = findViewById(R.id.stock);
+        cus = findViewById(R.id.cus);
+        oders = findViewById(R.id.oders);
+        sup = findViewById(R.id.sup);
         update_button = findViewById(R.id.update_button);
         delete_button = findViewById(R.id.delete_button);
         back_button = findViewById(R.id.back_button);
@@ -75,6 +79,38 @@ public class DetailsStock extends AppCompatActivity {
         getAndSetIntentData();
 
         back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(DetailsStock.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        stock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(DetailsStock.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        cus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(DetailsStock.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        oders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(DetailsStock.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        sup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
                 Intent intent1 = new Intent(DetailsStock.this, Home.class);

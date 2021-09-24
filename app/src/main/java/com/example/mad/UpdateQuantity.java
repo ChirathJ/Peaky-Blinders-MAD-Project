@@ -2,8 +2,10 @@ package com.example.mad;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,7 +16,7 @@ public class UpdateQuantity extends AppCompatActivity {
 
     TextView stockIDd, stockNamed;
     TextInputEditText quantityentry;
-    ImageButton save_button, back_button;
+    ImageButton save_button, back_button, stock, cus, oders, sup;
 
     String stockID, stockName, stockCategory, stockQuantity, stockUnitPrice;
 
@@ -26,6 +28,10 @@ public class UpdateQuantity extends AppCompatActivity {
         stockIDd = findViewById(R.id.stockIDdup);
         stockNamed = findViewById(R.id.stockNamedup);
         quantityentry = findViewById(R.id.upquantityentry);
+        stock = findViewById(R.id.stock);
+        cus = findViewById(R.id.cus);
+        oders = findViewById(R.id.oders);
+        sup = findViewById(R.id.sup);
         save_button = findViewById(R.id.save_button);
         back_button = findViewById(R.id.back_button);
 
@@ -34,7 +40,8 @@ public class UpdateQuantity extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                finish();
+                Intent intent1 = new Intent(UpdateQuantity.this, Home.class);
+                startActivity(intent1);
             }
         });
 
@@ -45,6 +52,38 @@ public class UpdateQuantity extends AppCompatActivity {
                 myDB.updateData(stockID,stockName,stockCategory,
                         Integer.parseInt(quantityentry.getText().toString().trim()),
                         Integer.parseInt(stockUnitPrice.trim()));
+            }
+        });
+
+        stock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(UpdateQuantity.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        cus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(UpdateQuantity.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        oders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(UpdateQuantity.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        sup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(UpdateQuantity.this, Home.class);
+                startActivity(intent1);
             }
         });
 

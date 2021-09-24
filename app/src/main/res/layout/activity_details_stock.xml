@@ -372,48 +372,53 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageButton
+                android:id="@+id/stock"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="35dp"
-                android:src="@drawable/stand"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 android:background="@null"
-                android:contentDescription="@string/stock" />
+                android:contentDescription="@string/stock"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stand"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <ImageButton
+                android:id="@+id/cus"
                 android:layout_width="56dp"
                 android:layout_height="55dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="45dp"
-                android:src="@drawable/rating"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 android:background="@null"
-                android:contentDescription="@string/customer" />
+                android:contentDescription="@string/customer"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rating" />
 
             <ImageButton
+                android:id="@+id/oders"
                 android:layout_width="54dp"
                 android:layout_height="52dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="45dp"
-                android:src="@drawable/order"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 android:background="@null"
-                android:contentDescription="@string/orders" />
+                android:contentDescription="@string/orders"
+                android:scaleType="fitCenter"
+                android:src="@drawable/order" />
 
             <ImageButton
+                android:id="@+id/sup"
                 android:layout_width="52dp"
                 android:layout_height="54dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="45dp"
-                android:src="@drawable/manufacture"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 android:background="@null"
-                android:contentDescription="@string/supplier" />
+                android:contentDescription="@string/supplier"
+                android:scaleType="fitCenter"
+                android:src="@drawable/manufacture" />
 
 
         </LinearLayout>//bottom

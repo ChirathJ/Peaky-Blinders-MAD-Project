@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">full</string>
     <string name="top_icon">Back</string>
-    <string name="stock_id">Stock ID:</string>
-    <string name="stock_id_entry">Stock ID</string>
+    <string name="stock_id">Product ID:</string>
+    <string name="stock_id_entry">Product ID</string>
     <string name="name">Name:</string>
     <string name="name_entry">Name</string>
     <string name="category">Category:</string>
@@ -13,8 +13,8 @@
     <string name="unit_price_entry">Unit Price</string>
     <string name="total_price">Total Price:</string>
     <string name="total_price_entry">Total Price</string>
-    <string name="add_heading">Add Stock Details</string>
-    <string name="edit_heading">Edit Stock Details</string>
+    <string name="add_heading">Add Product Details</string>
+    <string name="edit_heading">Edit Product Details</string>
     <string name="stock_id_entry_edit">A0021</string>
     <string name="name_entry_edit">Cheese</string>
     <string name="category_entry_edit">Food</string>
@@ -33,13 +33,13 @@
     <string name="Stock_Details_Name">Name:</string>
     <string name="Stock_Details_StockID_data">A00021</string>
     <string name="Stock_Details_StockID">Stock ID:</string>
-    <string name="stock_details">Stock Details</string>
-    <string name="stock">Stocks</string>
+    <string name="stock_details">Product Details</string>
+    <string name="stock">Product</string>
     <string name="customer">Customer</string>
     <string name="orders">Orders</string>
     <string name="supplier">Supplier</string>
     <string name="delete_stock">Delete_stock</string>
-    <string name="products_heading">Stocks</string>
+    <string name="products_heading">Products</string>
     <string name="search">Search</string>
     <string name="milk">Milk</string>
     <string name="sanitizers">Sanitizers</string>

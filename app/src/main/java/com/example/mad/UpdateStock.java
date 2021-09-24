@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,8 +16,9 @@ import com.google.android.material.textfield.TextInputEditText;
 public class UpdateStock extends AppCompatActivity {
 
     TextView stockIDd;
-    TextInputEditText upName1, upCategory1, upUnitPrice1, upQuantity1;
-    ImageButton update_button, back_button;
+    TextInputEditText upName1, upUnitPrice1, upQuantity1;
+    ImageButton update_button, back_button, stock, cus, oders, sup;
+    AutoCompleteTextView upCategory1;
 
     String stockID, stockName, stockCategory, stockQuantity, stockUnitPrice;
 
@@ -26,9 +29,13 @@ public class UpdateStock extends AppCompatActivity {
 
         stockIDd = findViewById(R.id.stockID);
         upName1 = findViewById(R.id.upName1);
-        upCategory1 = findViewById(R.id.upCategory1);
         upUnitPrice1 = findViewById(R.id.upUnitPrice1);
+        upCategory1 = findViewById(R.id.upCategory1);
         upQuantity1 = findViewById(R.id.upQuantity1);
+        stock = findViewById(R.id.stock);
+        cus = findViewById(R.id.cus);
+        oders = findViewById(R.id.oders);
+        sup = findViewById(R.id.sup);
         update_button = findViewById(R.id.update_button);
         back_button = findViewById(R.id.back_button);
 
@@ -37,10 +44,42 @@ public class UpdateStock extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                finish();
+                Intent intent1 = new Intent(UpdateStock.this, Home.class);
+                startActivity(intent1);
             }
         });
 
+        stock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(UpdateStock.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        cus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(UpdateStock.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        oders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(UpdateStock.this, Home.class);
+                startActivity(intent1);
+            }
+        });
+
+        sup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(UpdateStock.this, Home.class);
+                startActivity(intent1);
+            }
+        });
 
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +91,18 @@ public class UpdateStock extends AppCompatActivity {
                         Integer.parseInt(upUnitPrice1.getText().toString().trim()));
             }
         });
+
+        String[] type = new String[] {"Food", "Chemicals", "Cleaning Equipment", "Pharmaceuticals"};
+
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<>(
+                        this,
+                        R.layout.dropdown,
+                        type);
+
+        AutoCompleteTextView editTextFilledExposedDropdown =
+                findViewById(R.id.upCategory1);
+        editTextFilledExposedDropdown.setAdapter(adapter);
 
     }
     void getAndSetIntentData(){

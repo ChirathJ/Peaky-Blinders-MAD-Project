@@ -169,8 +169,8 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/upCategory"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:id="@+id/stockCategory"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/category_entry"
@@ -183,13 +183,15 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <AutoCompleteTextView
                             android:id="@+id/upCategory1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/unit_price_entry_edit" />
-
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            tools:ignore="LabelFor" />
                     </com.google.android.material.textfield.TextInputLayout>
+
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -315,6 +317,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageButton
+            android:id="@+id/stock"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
@@ -323,9 +326,11 @@
             android:background="@null"
             android:contentDescription="@string/stock"
             android:scaleType="fitCenter"
-            android:src="@drawable/stand" />
+            android:src="@drawable/stand"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <ImageButton
+            android:id="@+id/cus"
             android:layout_width="56dp"
             android:layout_height="55dp"
             android:layout_gravity="center_vertical"
@@ -337,6 +342,7 @@
             android:src="@drawable/rating" />
 
         <ImageButton
+            android:id="@+id/oders"
             android:layout_width="54dp"
             android:layout_height="52dp"
             android:layout_gravity="center_vertical"
@@ -348,6 +354,7 @@
             android:src="@drawable/order" />
 
         <ImageButton
+            android:id="@+id/sup"
             android:layout_width="52dp"
             android:layout_height="54dp"
             android:layout_gravity="center_vertical"
