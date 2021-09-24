@@ -10,19 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Home"
+            android:name=".edit_orders"
             android:exported="true" />
         <activity
-            android:name=".UpdateQuantity"
+            android:name=".details_order"
             android:exported="true" />
         <activity
-            android:name=".DetailsStock"
-            android:exported="true" />
-        <activity
-            android:name=".UpdateStock"
-            android:exported="true" />
-        <activity
-            android:name=".AddStock"
+            android:name=".add_orders"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
