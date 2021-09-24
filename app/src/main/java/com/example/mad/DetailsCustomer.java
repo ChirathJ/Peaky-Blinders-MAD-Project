@@ -72,7 +72,7 @@ public class DetailsCustomer extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(DetailsCustomer.this, Home.class);
+                Intent intent1 = new Intent(DetailsCustomer.this, MainActivity.class);
                 startActivity(intent1);
             }
         });

@@ -1,5 +1,6 @@
 package com.example.mad;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -36,7 +37,8 @@ public class UpdateCustomer extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                finish();
+                Intent intent1 = new Intent(UpdateCustomer.this, MainActivity.class);
+                startActivity(intent1);
             }
         });
 

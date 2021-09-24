@@ -78,6 +78,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             super(itemView);
             customer_id_txt = itemView.findViewById(R.id.customer_id_txt);
             customer_name_txt = itemView.findViewById(R.id.customer_name_txt);
+            customer_email_txt = itemView.findViewById(R.id.customer_email_txt);
             customer_phone_txt = itemView.findViewById(R.id.customer_phone_txt);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }

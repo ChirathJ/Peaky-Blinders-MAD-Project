@@ -39,7 +39,7 @@ public class AddCustomer extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(AddCustomer.this, Home.class);
+                Intent intent1 = new Intent(AddCustomer.this, MainActivity.class);
                 startActivity(intent1);
             }
         });
