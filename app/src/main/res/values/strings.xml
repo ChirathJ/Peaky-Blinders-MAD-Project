@@ -11,8 +11,6 @@
     <string name="phone_entry">Phone</string>
     <string name="joined_date">Joined Date:</string>
     <string name="joined_date_entry">Joined Date</string>
-    <string name="level">Level:</string>
-    <string name="level_entry">Level</string>
     <string name="add_heading">Add Customer Details</string>
     <string name="edit_heading">Edit Customer Details</string>
     <string name="customer_id_entry_edit">C0010</string>
@@ -20,10 +18,6 @@
     <string name="email_entry_edit">kamalp@gmail.com</string>
     <string name="phone_entry_edit">0112338394</string>
     <string name="joined_date_entry_edit">20.06.2015</string>
-    <string name="level_entry_edit">Experienced</string>
-    <string name="add_map">Add Map</string>
-    <string name="customer_Details_Level_data">Beginner</string>
-    <string name="customer_Details_Level">Level:</string>
     <string name="customer_Details_JoinedDate_data">08.06.2017</string>
     <string name="customer_Details_JoinedDate">Joined Date:</string>
     <string name="customer_Details_Phone_data">0112736379</string>
@@ -46,6 +40,5 @@
     <string name="addimage">AddImage</string>
     <string name="add_phone">Add Phone</string>
     <string name="update_phone">Update Phone</string>
-
 
 </resources>

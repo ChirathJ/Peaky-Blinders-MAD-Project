@@ -213,8 +213,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/customerJoinedDate1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number" />
+                            android:layout_height="wrap_content" />
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -224,7 +223,6 @@
                     android:layout_height="2dp"
                     android:alpha="0.5"
                     android:background="#808080" />
-
 
 
                 <LinearLayout
@@ -245,17 +243,6 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/save" />
 
-                    <ImageButton
-                        android:id="@+id/add_map_button"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1.0"
-                        android:adjustViewBounds="true"
-                        android:background="@null"
-                        android:contentDescription="@string/add_map"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/addmap" />
 
                 </LinearLayout>
 
