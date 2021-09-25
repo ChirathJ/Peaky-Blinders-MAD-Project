@@ -37,7 +37,7 @@ public class UpdateCustomer extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(UpdateCustomer.this, MainActivity.class);
+                Intent intent1 = new Intent(UpdateCustomer.this, CustomerMainActivity.class);
                 startActivity(intent1);
             }
         });
@@ -46,7 +46,7 @@ public class UpdateCustomer extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(UpdateCustomer.this);
+                CustomerDatabaseHelper myDB = new CustomerDatabaseHelper(UpdateCustomer.this);
                 myDB.updateData(customerID,upName1.getText().toString().trim(),
                         upEmail1.getText().toString().trim(),
                         upPhone1.getText().toString().trim(),

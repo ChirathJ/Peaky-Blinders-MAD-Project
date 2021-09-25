@@ -41,7 +41,7 @@ public class UpdatePhone extends AppCompatActivity {
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(UpdatePhone.this);
+                CustomerDatabaseHelper myDB = new CustomerDatabaseHelper(UpdatePhone.this);
                 myDB.updateData(customerID,customerName,customerEmail,
                         phoneentry.getText().toString().trim(),
                         customerJoinedDate.toString().trim());

@@ -15,14 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class CustomerMainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ImageButton add_button;
 
-    MyDatabaseHelper myDB;
+    CustomerDatabaseHelper myDB;
     ArrayList<String> customerID, customerName, customerEmail, customerPhone, customerJoinedDate;
-    CustomAdapter customAdapter;
+    CustomerAdapter customAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AddCustomer.class);
+                Intent intent = new Intent(CustomerMainActivity.this, AddCustomer.class);
                 startActivity(intent);
             }
         });
 
-        myDB = new MyDatabaseHelper(MainActivity.this);
+        myDB = new CustomerDatabaseHelper(CustomerMainActivity.this);
         customerID = new ArrayList<>();
         customerName = new ArrayList<>();
         customerEmail = new ArrayList<>();
@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
         storeDataInArrays();
 
-        customAdapter = new CustomAdapter(MainActivity.this,this, customerID, customerName, customerEmail, customerPhone, customerJoinedDate);
+        customAdapter = new CustomerAdapter(CustomerMainActivity.this,this, customerID, customerName, customerEmail, customerPhone, customerJoinedDate);
         recyclerView.setAdapter(customAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(CustomerMainActivity.this));
 
     }
 

@@ -18,14 +18,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
+public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.CustomerViewHolder> {
 
     private Context context;
     private Activity activity;
     private ArrayList customerID, customerName, customerEmail, customerPhone, customerJoinedDate;
 
-    CustomAdapter(Activity activity, Context context, ArrayList customerID, ArrayList customerName, ArrayList customerEmail, ArrayList customerPhone,
-                  ArrayList customerJoinedDate) {
+    CustomerAdapter(Activity activity, Context context, ArrayList customerID, ArrayList customerName, ArrayList customerEmail, ArrayList customerPhone,
+                    ArrayList customerJoinedDate) {
         this.activity = activity;
         this.context = context;
         this.customerID = customerID;
@@ -37,15 +37,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CustomerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.row, parent, false);
-        return new MyViewHolder(view);
+        return new CustomerViewHolder(view);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+    public void onBindViewHolder(@NonNull final CustomerViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.customer_id_txt.setText(String.valueOf(customerID.get(position)));
         holder.customer_name_txt.setText(String.valueOf(customerName.get(position)));
         holder.customer_email_txt.setText(String.valueOf(customerEmail.get(position)));
@@ -69,12 +69,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         return customerID.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
+    class CustomerViewHolder extends RecyclerView.ViewHolder {
 
         TextView customer_id_txt, customer_name_txt, customer_email_txt, customer_phone_txt;
         LinearLayout mainLayout;
 
-        MyViewHolder(@NonNull View itemView) {
+        CustomerViewHolder(@NonNull View itemView) {
             super(itemView);
             customer_id_txt = itemView.findViewById(R.id.customer_id_txt);
             customer_name_txt = itemView.findViewById(R.id.customer_name_txt);

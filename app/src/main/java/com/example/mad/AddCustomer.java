@@ -28,7 +28,7 @@ public class AddCustomer extends AppCompatActivity {
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(AddCustomer.this);
+                CustomerDatabaseHelper myDB = new CustomerDatabaseHelper(AddCustomer.this);
                 myDB.addStock(customerName.getText().toString().trim(),
                         customerEmail.getText().toString().trim(),
                         customerPhone.getText().toString().trim(),
@@ -39,7 +39,7 @@ public class AddCustomer extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(AddCustomer.this, MainActivity.class);
+                Intent intent1 = new Intent(AddCustomer.this, CustomerMainActivity.class);
                 startActivity(intent1);
             }
         });

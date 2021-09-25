@@ -22,7 +22,7 @@
             android:name=".AddCustomer"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".CustomerMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
