@@ -342,19 +342,6 @@
                         android:contentDescription="Edit Supplier Details" />
 
                     <ImageButton
-                        android:id="@+id/updatesupplier_button"
-                        android:layout_width="50dp"
-                        android:layout_height="55dp"
-                        android:autofillHints="emailAddress"
-                        android:layout_gravity="start"
-                        android:layout_weight="1.0"
-                        android:src="@drawable/save13"
-                        android:scaleType="fitCenter"
-                        android:adjustViewBounds="true"
-                        android:background="@null"
-                        android:contentDescription="Add Supplier" />
-
-                    <ImageButton
                         android:id="@+id/delete_button"
                         android:layout_width="50dp"
                         android:layout_height="50dp"

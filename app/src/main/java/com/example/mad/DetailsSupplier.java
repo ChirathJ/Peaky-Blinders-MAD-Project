@@ -36,22 +36,8 @@ public class DetailsSupplier extends AppCompatActivity {
         update_button = findViewById(R.id.update_button);
         delete_button = findViewById(R.id.delete_button);
         back_button = findViewById(R.id.back_button);
-        updatesupplier_button= findViewById(R.id.updatesupplier_button);
 
         update_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(DetailsSupplier.this, UpdateSupplier.class);
-                intent.putExtra("id", String.valueOf(supplierID));
-                intent.putExtra("name", String.valueOf(supplierName));
-                intent.putExtra("address", String.valueOf(supplierAddress));
-                intent.putExtra("email", String.valueOf(supplierEmail));
-                intent.putExtra("phone", String.valueOf(supplierPhone));
-                startActivity(intent);
-            }
-        });
-
-        updatesupplier_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DetailsSupplier.this, UpdateSupplier.class);

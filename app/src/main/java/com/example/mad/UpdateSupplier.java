@@ -41,7 +41,7 @@ public class UpdateSupplier extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(UpdateSupplier.this, Home.class);
+                Intent intent1 = new Intent(UpdateSupplier.this, SupplierMainActivity.class);
                 startActivity(intent1);
             }
         });

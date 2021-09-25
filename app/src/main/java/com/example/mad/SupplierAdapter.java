@@ -48,8 +48,6 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
         holder.supplier_id_txt.setText(String.valueOf(supplierID.get(position)));
         holder.supplier_name_txt.setText(String.valueOf(supplierName.get(position)));
         holder.supplier_address_txt.setText(String.valueOf(supplierAddress.get(position)));
-        holder.supplier_email_txt.setText(String.valueOf(supplierEmail.get(position)));
-        holder.supplier_phone_txt.setText(String.valueOf(supplierPhone.get(position)));
 
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
