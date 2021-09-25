@@ -60,7 +60,7 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/supplier" />
+            app:srcCompat="@drawable/factory" />
 
         <ScrollView
             android:id="@+id/scrollView2"
@@ -348,7 +348,7 @@
                         android:autofillHints="emailAddress"
                         android:layout_gravity="start"
                         android:layout_weight="1.0"
-                        android:src="@drawable/company3"
+                        android:src="@drawable/save"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:background="@null"
