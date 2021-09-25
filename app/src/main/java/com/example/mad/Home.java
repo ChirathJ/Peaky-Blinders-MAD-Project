@@ -68,7 +68,7 @@ public class Home extends AppCompatActivity {
             Toast.makeText(this,"No Data.",Toast.LENGTH_LONG).show();
         }else{
             int count = cursor.getCount();
-            Toast.makeText(this,String.valueOf(count),Toast.LENGTH_LONG).show();
+            Toast.makeText(this,String.valueOf(count),Toast.LENGTH_SHORT).show();
             stockIDd.setText(String.valueOf(count));
             while (cursor.moveToNext()){
                 stockID.add(cursor.getString(0));

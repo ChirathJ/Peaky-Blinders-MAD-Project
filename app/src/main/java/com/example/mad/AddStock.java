@@ -3,6 +3,7 @@ package com.example.mad;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -10,6 +11,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -39,10 +41,15 @@ public class AddStock extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(AddStock.this);
-                myDB.addStock(stockName.getText().toString().trim(),
-                        stockCategory.getText().toString().trim(),
-                        Integer.parseInt(stockUnitPrice.getText().toString().trim()),
-                        Integer.parseInt(stockQuantity.getText().toString().trim()));
+                if(stockName.getText().toString().trim().equals("") || stockCategory.getText().toString().trim().equals("") || stockUnitPrice.getText().toString().trim().equals("") || stockQuantity.getText().toString().trim().equals("")){
+                    toast();
+                }
+                else {
+                    myDB.addStock(stockName.getText().toString().trim(),
+                            stockCategory.getText().toString().trim(),
+                            Integer.parseInt(stockUnitPrice.getText().toString().trim()),
+                            Integer.parseInt(stockQuantity.getText().toString().trim()));
+                }
             }
         });
 
@@ -97,5 +104,8 @@ public class AddStock extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+    }
+    void toast(){
+            Toast.makeText(this,"Enter Data",Toast.LENGTH_LONG).show();
     }
 }

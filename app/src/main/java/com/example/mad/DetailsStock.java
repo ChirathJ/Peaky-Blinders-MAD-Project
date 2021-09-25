@@ -1,18 +1,15 @@
 package com.example.mad;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailsStock extends AppCompatActivity {
 
@@ -130,7 +127,7 @@ public class DetailsStock extends AppCompatActivity {
             stockUnitPrice = getIntent().getStringExtra("unitprice");
 
             //calculation
-            stockTotalPrice = Integer.parseInt(stockQuantity)*Integer.parseInt(stockUnitPrice);;
+            stockTotalPrice = calculation(stockQuantity, stockUnitPrice);
 
             //Setting Intent Data
             stockIDd.setText(stockID);
@@ -164,4 +161,11 @@ public class DetailsStock extends AppCompatActivity {
         });
         builder.create().show();
     }
+
+    static int calculation(String quant, String price){
+        int TotalPrice;
+        TotalPrice = Integer.parseInt(quant)*Integer.parseInt(price);
+        return TotalPrice;
+    }
+
 }
