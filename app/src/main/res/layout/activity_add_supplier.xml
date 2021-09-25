@@ -48,8 +48,8 @@
 
         <ImageView
             android:id="@+id/imageV5"
-            android:layout_width="160dp"
-            android:layout_height="140dp"
+            android:layout_width="192dp"
+            android:layout_height="177dp"
             android:layout_marginTop="90dp"
             android:contentDescription="@string/top_icon"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="240dp"
+                android:layout_marginTop="290dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/white_background"
                 android:orientation="vertical"
@@ -175,8 +175,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/supplierEmail1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number"/>
+                            android:layout_height="wrap_content" />
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
