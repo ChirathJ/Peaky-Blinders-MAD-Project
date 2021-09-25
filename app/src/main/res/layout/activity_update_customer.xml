@@ -226,7 +226,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="number"
-                            android:text="@string/phone_entry_edit" />
+                            android:text="@string/phone_entry_edit"
+                            android:maxLength="10"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
