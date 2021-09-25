@@ -44,7 +44,7 @@ public class UpdateSupplier extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(UpdateSupplier.this);
+                SupplierDatabaseHelper myDB = new SupplierDatabaseHelper(UpdateSupplier.this);
                 myDB.updateData(supplierID,upName1.getText().toString().trim(),
                         upAddress1.getText().toString().trim(),
                         upEmail1.getText().toString().trim(),

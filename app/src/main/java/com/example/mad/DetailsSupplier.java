@@ -72,7 +72,7 @@ public class DetailsSupplier extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(DetailsSupplier.this, MainActivity.class);
+                Intent intent1 = new Intent(DetailsSupplier.this, SupplierMainActivity.class);
                 startActivity(intent1);
             }
         });
@@ -106,7 +106,7 @@ public class DetailsSupplier extends AppCompatActivity {
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(DetailsSupplier.this);
+                SupplierDatabaseHelper myDB = new SupplierDatabaseHelper(DetailsSupplier.this);
                 myDB.deleteOneRow(supplierID);
                 finish();
             }

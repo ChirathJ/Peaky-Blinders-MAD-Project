@@ -14,12 +14,12 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class SupplierMainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ImageButton add_button;
 
-    MyDatabaseHelper myDB;
+    SupplierDatabaseHelper myDB;
     ArrayList<String> supplierID, supplierName, supplierAddress, supplierEmail, supplierPhone;
     SupplierAdapter customAdapter;
 
@@ -32,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AddSupplier.class);
+                Intent intent = new Intent(SupplierMainActivity.this, AddSupplier.class);
                 startActivity(intent);
             }
         });
 
-        myDB = new MyDatabaseHelper(MainActivity.this);
+        myDB = new SupplierDatabaseHelper(SupplierMainActivity.this);
         supplierID = new ArrayList<>();
         supplierName = new ArrayList<>();
         supplierAddress = new ArrayList<>();
@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
         storeDataInArrays();
 
-        customAdapter = new SupplierAdapter(MainActivity.this,this, supplierID, supplierName, supplierAddress, supplierEmail, supplierPhone);
+        customAdapter = new SupplierAdapter(SupplierMainActivity.this,this, supplierID, supplierName, supplierAddress, supplierEmail, supplierPhone);
         recyclerView.setAdapter(customAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(SupplierMainActivity.this));
 
     }
 

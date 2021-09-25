@@ -29,7 +29,7 @@ public class AddSupplier extends AppCompatActivity {
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(AddSupplier.this);
+                SupplierDatabaseHelper myDB = new SupplierDatabaseHelper(AddSupplier.this);
                 myDB.addSupplier(supplierName.getText().toString().trim(),
                         supplierAddress.getText().toString().trim(),
                         supplierEmail.getText().toString().trim(),
@@ -41,7 +41,7 @@ public class AddSupplier extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(AddSupplier.this, MainActivity.class);
+                Intent intent1 = new Intent(AddSupplier.this, SupplierMainActivity.class);
                 startActivity(intent1);
             }
         });
