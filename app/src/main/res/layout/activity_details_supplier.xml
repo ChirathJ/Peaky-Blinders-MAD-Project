@@ -305,7 +305,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/details12"
+                        android:id="@+id/supplierPostalCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -335,7 +335,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="end"
                         android:layout_weight="1.0"
-                        android:src="@drawable/edit"
+                        android:src="@drawable/edit3"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:background="@null"
@@ -348,7 +348,7 @@
                         android:autofillHints="emailAddress"
                         android:layout_gravity="start"
                         android:layout_weight="1.0"
-                        android:src="@drawable/save"
+                        android:src="@drawable/save13"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:background="@null"
@@ -360,7 +360,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="start"
                         android:layout_weight="1.0"
-                        android:src="@drawable/bin"
+                        android:src="@drawable/delete12"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:background="@null"
