@@ -48,6 +48,7 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
         holder.supplier_id_txt.setText(String.valueOf(supplierID.get(position)));
         holder.supplier_name_txt.setText(String.valueOf(supplierName.get(position)));
         holder.supplier_address_txt.setText(String.valueOf(supplierAddress.get(position)));
+        holder.supplier_phone_txt.setText(String.valueOf(supplierPhone.get(position)));
 
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +79,7 @@ public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.Suppli
             supplier_id_txt = itemView.findViewById(R.id.supplier_id_txt);
             supplier_name_txt = itemView.findViewById(R.id.supplier_name_txt);
             supplier_address_txt = itemView.findViewById(R.id.supplier_address_txt);
+            supplier_phone_txt = itemView.findViewById(R.id.supplier_phone_txt);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
 

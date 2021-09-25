@@ -44,7 +44,7 @@ class SupplierDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    void addSupplier(String name, String address, String email, int phone){
+    void addSupplier(String name, String address, String email, String phone){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 

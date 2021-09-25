@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:text="Supplier ID"
+                android:text="Supplier Name"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#000"
@@ -48,7 +48,7 @@
                 android:id="@+id/supplier_address_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Supplier Name"
+                android:text="Supplier Address"
                 app:layout_constraintStart_toStartOf="@+id/supplier_name_txt"
                 app:layout_constraintTop_toBottomOf="@+id/supplier_name_txt" />
 

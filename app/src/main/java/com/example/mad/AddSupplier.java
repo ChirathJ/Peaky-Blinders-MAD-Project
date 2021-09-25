@@ -37,7 +37,7 @@ public class AddSupplier extends AppCompatActivity {
                 myDB.addSupplier(supplierName.getText().toString().trim(),
                         supplierAddress.getText().toString().trim(),
                         supplierEmail.getText().toString().trim(),
-                      Integer.parseInt (supplierPhone.getText().toString().trim()));
+                        supplierPhone.getText().toString().trim());
             }
         });
 
