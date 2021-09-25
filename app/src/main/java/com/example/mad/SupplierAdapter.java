@@ -17,14 +17,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
+public class SupplierAdapter extends RecyclerView.Adapter<SupplierAdapter.SupplierViewHolder> {
 
     private Context context;
     private Activity activity;
     private ArrayList supplierID, supplierName, supplierAddress, supplierEmail, supplierPhone;
 
-    CustomAdapter(Activity activity, Context context, ArrayList supplierID, ArrayList supplierName, ArrayList supplierAddress, ArrayList supplierEmail,
-                  ArrayList supplierPhone) {
+    SupplierAdapter(Activity activity, Context context, ArrayList supplierID, ArrayList supplierName, ArrayList supplierAddress, ArrayList supplierEmail,
+                    ArrayList supplierPhone) {
         this.activity = activity;
         this.context = context;
         this.supplierID = supplierID;
@@ -36,15 +36,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SupplierViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.my_row, parent, false);
-        return new MyViewHolder(view);
+        View view = inflater.inflate(R.layout.supp_row, parent, false);
+        return new SupplierViewHolder(view);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+    public void onBindViewHolder(@NonNull final SupplierViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.supplier_id_txt.setText(String.valueOf(supplierID.get(position)));
         holder.supplier_name_txt.setText(String.valueOf(supplierName.get(position)));
         holder.supplier_address_txt.setText(String.valueOf(supplierAddress.get(position)));
@@ -70,12 +70,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         return supplierID.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
+    class SupplierViewHolder extends RecyclerView.ViewHolder {
 
         TextView supplier_id_txt, supplier_name_txt, supplier_address_txt, supplier_email_txt, supplier_phone_txt;
         LinearLayout mainLayout;
 
-        MyViewHolder(@NonNull View itemView) {
+        SupplierViewHolder(@NonNull View itemView) {
             super(itemView);
             supplier_id_txt = itemView.findViewById(R.id.supplier_id_txt);
             supplier_name_txt = itemView.findViewById(R.id.supplier_name_txt);

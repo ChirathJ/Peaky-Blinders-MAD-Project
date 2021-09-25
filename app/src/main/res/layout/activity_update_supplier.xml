@@ -40,7 +40,7 @@
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/previous" />
+            app:srcCompat="@drawable/back" />
 
         <TextView
             android:id="@+id/topText2"
@@ -187,7 +187,7 @@
                             android:id="@+id/upAddress1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="No1,Colombo,04" />
+                            android:text="Highlevel road Nugegoda" />
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -265,7 +265,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="number"
-                            android:text="0112646969" />
+                            android:text="0112646969"
+                            android:maxLength="10"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>

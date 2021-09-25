@@ -30,7 +30,7 @@
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/previous"
+            app:srcCompat="@drawable/back"
             />
 
         <TextView
@@ -213,7 +213,8 @@
                             android:id="@+id/supplierPhone1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="10"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>

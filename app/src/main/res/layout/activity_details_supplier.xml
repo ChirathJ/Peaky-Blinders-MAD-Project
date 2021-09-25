@@ -34,7 +34,7 @@
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/previous"
+            app:srcCompat="@drawable/back"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <TextView

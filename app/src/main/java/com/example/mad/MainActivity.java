@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     MyDatabaseHelper myDB;
     ArrayList<String> supplierID, supplierName, supplierAddress, supplierEmail, supplierPhone;
-    CustomAdapter customAdapter;
+    SupplierAdapter customAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         storeDataInArrays();
 
-        customAdapter = new CustomAdapter(MainActivity.this,this, supplierID, supplierName, supplierAddress, supplierEmail, supplierPhone);
+        customAdapter = new SupplierAdapter(MainActivity.this,this, supplierID, supplierName, supplierAddress, supplierEmail, supplierPhone);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
