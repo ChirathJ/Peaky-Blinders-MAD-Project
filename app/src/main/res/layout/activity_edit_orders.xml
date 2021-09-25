@@ -28,7 +28,7 @@
         android:contentDescription="@string/top_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backbutton"
+        app:srcCompat="@drawable/backbuttonorder"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:background="@null"/>
@@ -215,6 +215,7 @@
                 android:layout_width="340dp"
                 android:layout_height="50dp"
                 android:ems="10"
+                android:maxLength="10"
                 android:hint="@string/required_Date_entry_edit"
                 android:inputType="date"
                 android:textColor="@color/black"
