@@ -17,7 +17,7 @@ public class UpdateStock extends AppCompatActivity {
 
     TextView stockIDd;
     TextInputEditText upName1, upUnitPrice1, upQuantity1;
-    ImageButton update_button, back_button, stock, cus, oders, sup;
+    ImageButton update_button, back_button, stock, cus, order, sup;
     AutoCompleteTextView upCategory1;
 
     String stockID, stockName, stockCategory, stockQuantity, stockUnitPrice;
@@ -34,7 +34,7 @@ public class UpdateStock extends AppCompatActivity {
         upQuantity1 = findViewById(R.id.upQuantity1);
         stock = findViewById(R.id.stock);
         cus = findViewById(R.id.cus);
-        oders = findViewById(R.id.oders);
+        order = findViewById(R.id.order);
         sup = findViewById(R.id.sup);
         update_button = findViewById(R.id.update_button);
         back_button = findViewById(R.id.back_button);
@@ -65,7 +65,7 @@ public class UpdateStock extends AppCompatActivity {
             }
         });
 
-        oders.setOnClickListener(new View.OnClickListener() {
+        order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
                 Intent intent1 = new Intent(UpdateStock.this, Home.class);

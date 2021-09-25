@@ -1,24 +1,21 @@
 package com.example.mad;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
 public class AddStock extends AppCompatActivity {
 
     TextInputEditText stockName, stockQuantity, stockUnitPrice;
-    ImageButton save_button, back_button, stock, cus, oders, sup;
+    ImageButton save_button, back_button, stock, cus, order, sup;
     AutoCompleteTextView stockCategory;
 
 
@@ -33,7 +30,7 @@ public class AddStock extends AppCompatActivity {
         stockUnitPrice = findViewById(R.id.stockUnitPrice1);
         stock = findViewById(R.id.stock);
         cus = findViewById(R.id.cus);
-        oders = findViewById(R.id.oders);
+        order = findViewById(R.id.order);
         sup = findViewById(R.id.sup);
         save_button = findViewById(R.id.save_button);
         back_button = findViewById(R.id.back_button);
@@ -76,15 +73,15 @@ public class AddStock extends AppCompatActivity {
         cus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(AddStock.this, Home.class);
+                Intent intent1 = new Intent(AddStock.this, CustomerMainActivity.class);
                 startActivity(intent1);
             }
         });
 
-        oders.setOnClickListener(new View.OnClickListener() {
+        order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(AddStock.this, Home.class);
+                Intent intent1 = new Intent(AddStock.this, OrderMainActivity.class);
                 startActivity(intent1);
             }
         });
@@ -92,7 +89,7 @@ public class AddStock extends AppCompatActivity {
         sup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(AddStock.this, Home.class);
+                Intent intent1 = new Intent(AddStock.this, SupplierMainActivity.class);
                 startActivity(intent1);
             }
         });

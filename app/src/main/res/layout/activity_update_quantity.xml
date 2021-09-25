@@ -265,7 +265,7 @@
             android:src="@drawable/rating" />
 
         <ImageButton
-            android:id="@+id/oders"
+            android:id="@+id/order"
             android:layout_width="54dp"
             android:layout_height="52dp"
             android:layout_gravity="center_vertical"

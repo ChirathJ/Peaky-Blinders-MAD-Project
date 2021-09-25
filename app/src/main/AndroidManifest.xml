@@ -25,6 +25,45 @@
             android:name=".AddStock"
             android:exported="true" />
         <activity
+            android:name=".AddCustomer"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DetailsCustomer"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateCustomer"
+            android:exported="true" />
+        <activity
+            android:name=".UpdatePhone"
+            android:exported="true" />
+        <activity
+            android:name=".AddSupplier"
+            android:exported="true" />
+        <activity
+            android:name=".DetailsSupplier"
+            android:exported="true" />
+        <activity
+            android:name=".SupplierMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateSupplier"
+            android:exported="true" />
+        <activity
+            android:name=".add_orders"
+            android:exported="true" />
+        <activity
+            android:name=".details_order"
+            android:exported="true" />
+        <activity
+            android:name=".edit_orders"
+            android:exported="true" />
+        <activity
+            android:name=".OrderMainActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

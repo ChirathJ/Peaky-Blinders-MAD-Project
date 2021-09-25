@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SupplierMainActivity"
+        android:background="@color/colorPrimary"
+        tools:ignore="ExtraText">
+
+        <View
+            android:id="@+id/topView"
+            android:layout_width="0dp"
+            android:layout_height="280dp"
+            android:background="@color/colorBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/top_icon"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            />
+
+        <TextView
+            android:id="@+id/topText2"
+            android:layout_width="306dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="30dp"
+            android:text="Add Supplier Details"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageV5"
+            android:layout_width="192dp"
+            android:layout_height="177dp"
+            android:layout_marginTop="90dp"
+            android:contentDescription="@string/top_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/company" />
+
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="290dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/white_background"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/supplierName"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name_entry"
+                        app:hintTextAppearance="@style/TextLabel"
+                        app:boxBackgroundColor="@color/textbox"
+                        app:boxStrokeColor="@color/black"
+                        app:color="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/supplierName1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:alpha="0.5"
+                    android:background="#808080" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/supplierAddress"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        app:hintTextAppearance="@style/TextLabel"
+                        app:boxBackgroundColor="@color/textbox"
+                        app:boxStrokeColor="@color/black"
+                        app:color="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/supplierAddress1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:alpha="0.5"
+                    android:background="#808080" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/supplierEmail"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        app:hintTextAppearance="@style/TextLabel"
+                        app:boxBackgroundColor="@color/textbox"
+                        app:boxStrokeColor="@color/black"
+                        app:color="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/supplierEmail1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:alpha="0.5"
+                    android:background="#808080" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/supplierPhone"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone"
+                        app:hintTextAppearance="@style/TextLabel"
+                        app:boxBackgroundColor="@color/textbox"
+                        app:boxStrokeColor="@color/black"
+                        app:color="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/supplierPhone1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:alpha="0.5"
+                    android:background="#808080" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/save_button"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.0"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:contentDescription="@string/save"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/save13" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="417dp"
+            android:layout_height="70dp"
+            android:gravity="top"
+            android:background="@color/colorBar"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/stock"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="35dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/stock"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stand" />
+
+            <ImageButton
+                android:id="@+id/cus"
+                android:layout_width="56dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="45dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/customer"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rating" />
+
+            <ImageButton
+                android:id="@+id/order"
+                android:layout_width="54dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="45dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/orders"
+                android:scaleType="fitCenter"
+                android:src="@drawable/order" />
+
+            <ImageButton
+                android:id="@+id/sup"
+                android:layout_width="52dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="45dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/supplier"
+                android:scaleType="fitCenter"
+                android:src="@drawable/manufacture" />
+
+
+        </LinearLayout>
+        //bottom
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

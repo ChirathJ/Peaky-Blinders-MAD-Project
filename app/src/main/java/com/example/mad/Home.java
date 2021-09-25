@@ -1,10 +1,5 @@
 package com.example.mad;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -13,13 +8,18 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
 public class Home extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ImageButton add_button;
-    TextView stockIDd;
+    ImageButton add_button, cus, order, sup;
+    TextView countd;
     MyDatabaseHelper myDB;
     ArrayList<String> stockID, stockName, stockCategory, stockQuantity, stockUnitPrice;
     CustomAdapter customAdapter;
@@ -29,7 +29,10 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list1);
         recyclerView = findViewById(R.id.list_item);
-        stockIDd = findViewById(R.id.count);
+        countd = findViewById(R.id.count);
+        cus = findViewById(R.id.cus);
+        order = findViewById(R.id.order);
+        sup = findViewById(R.id.sup);
         add_button = findViewById(R.id.add_button);
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +55,31 @@ public class Home extends AppCompatActivity {
         customAdapter = new CustomAdapter(Home.this,this, stockID, stockName, stockCategory, stockQuantity, stockUnitPrice);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(Home.this));
+
+        cus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(Home.this, CustomerMainActivity.class);
+                startActivity(intent1);
+            }
+        });
+
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(Home.this, OrderMainActivity.class);
+                startActivity(intent1);
+            }
+        });
+
+        sup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                Intent intent1 = new Intent(Home.this, SupplierMainActivity.class);
+                startActivity(intent1);
+            }
+        });
+
     }
 
     @Override
@@ -69,7 +97,7 @@ public class Home extends AppCompatActivity {
         }else{
             int count = cursor.getCount();
             Toast.makeText(this,String.valueOf(count),Toast.LENGTH_SHORT).show();
-            stockIDd.setText(String.valueOf(count));
+            countd.setText(String.valueOf(count));
             while (cursor.moveToNext()){
                 stockID.add(cursor.getString(0));
                 stockName.add(cursor.getString(1));

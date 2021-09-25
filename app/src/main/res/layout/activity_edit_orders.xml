@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    tools:ignore="ExtraText">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/colorBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/imageBackButtonEditOrder"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/top_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backbuttonorder"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:background="@null"/>
+
+    <TextView
+        android:id="@+id/topText2"
+        android:layout_width="306dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/order_edit_heading"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/topView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownIdInLayout" />
+
+    <ImageView
+        android:id="@+id/imageV5"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="68dp"
+        android:contentDescription="@string/top_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/addordersphoto" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/white_background"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/details3"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/itemName"
+                android:textColor="@color/TextViewColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextItemNameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ItemName_entry_edit"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/details5"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/brand"
+                android:textColor="@color/TextViewColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextBrandEdit"
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:hint="@string/brand_entry_edit"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:importantForAutofill="no" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/details7"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/customerName"
+                android:textColor="@color/TextViewColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextCustomer_entry_edit"
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:hint="@string/customer_entry_edit"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:importantForAutofill="no" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/details9"
+                android:layout_width="140dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/ItemDescription"
+                android:textColor="@color/TextViewColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextItemDescription_entry_edit"
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:hint="@string/ItemDescription_entry_edit"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:importantForAutofill="no" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/details11"
+                android:layout_width="150dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/required_Date"
+                android:textColor="@color/TextViewColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextRequired_Date_entry_edit"
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:maxLength="10"
+                android:hint="@string/required_Date_entry_edit"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:importantForAutofill="no"
+                tools:ignore="TextFields" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/buttonEditOrder"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1.0"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/diskette1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/save" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="417dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/colorBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/stock"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="35dp"
+            android:src="@drawable/stand"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/stock" />
+
+        <ImageButton
+            android:id="@+id/cus"
+            android:layout_width="56dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="45dp"
+            android:src="@drawable/rating"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/customer" />
+
+        <ImageButton
+            android:id="@+id/order"
+            android:layout_width="54dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="45dp"
+            android:src="@drawable/order"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/orders" />
+
+        <ImageButton
+            android:id="@+id/sup"
+            android:layout_width="52dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="45dp"
+            android:src="@drawable/manufacture"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@string/supplier" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class DetailsStock extends AppCompatActivity {
 
     TextView stockIDd, stockNamed, stockCategoryd, stockQuantityd, stockUnitPriced, stockTotalPriced;
-    ImageButton update_button, updatestock_button, delete_button, back_button, stock, cus, oders, sup;
+    ImageButton update_button, updatestock_button, delete_button, back_button, stock, cus, order, sup;
 
     String stockID, stockName, stockCategory, stockQuantity, stockUnitPrice;
     int stockTotalPrice;
@@ -33,7 +33,7 @@ public class DetailsStock extends AppCompatActivity {
         stockTotalPriced = findViewById(R.id.stockTotalPriced);
         stock = findViewById(R.id.stock);
         cus = findViewById(R.id.cus);
-        oders = findViewById(R.id.oders);
+        order = findViewById(R.id.order);
         sup = findViewById(R.id.sup);
         update_button = findViewById(R.id.update_button);
         delete_button = findViewById(R.id.delete_button);
@@ -99,7 +99,7 @@ public class DetailsStock extends AppCompatActivity {
             }
         });
 
-        oders.setOnClickListener(new View.OnClickListener() {
+        order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
                 Intent intent1 = new Intent(DetailsStock.this, Home.class);
