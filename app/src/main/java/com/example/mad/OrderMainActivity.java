@@ -12,34 +12,32 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class OrderMainActivity extends AppCompatActivity {
 
     private ImageButton addOrders;
     RecyclerView recyclerView;
 
     ArrayList<String> orderId, ItemName, brand, customer, description, reqDate;
     private  DBHandler dbHandler;
-    CustomAdapter customAdapter;
+    OrderAdapter customAdapter;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_order);
 
         addOrders = (ImageButton) findViewById(R.id.ImageButtonAddOrder);
         recyclerView = (RecyclerView) findViewById(R.id.orderList);
 
 
-        dbHandler = new DBHandler(MainActivity.this);
+        dbHandler = new DBHandler(OrderMainActivity.this);
         orderId = new ArrayList<>();
         ItemName = new ArrayList<>();
         brand = new ArrayList<>();
@@ -52,16 +50,16 @@ public class MainActivity extends AppCompatActivity {
 
         //OrdersAdapter adapter = new OrdersAdapter(MainActivity.this,this,orders);
 
-        customAdapter = new CustomAdapter(MainActivity.this,this, orderId, ItemName, brand, customer, description, reqDate);
+        customAdapter = new OrderAdapter(OrderMainActivity.this,this, orderId, ItemName, brand, customer, description, reqDate);
         recyclerView.setAdapter(customAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(OrderMainActivity.this));
 
 
         addOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,add_orders.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(OrderMainActivity.this,add_orders.class);
+                OrderMainActivity.this.startActivity(intent);
             }
         });
 

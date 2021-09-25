@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class edit_orders extends AppCompatActivity {
@@ -37,7 +36,7 @@ public class edit_orders extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
-                Intent intent1 = new Intent(edit_orders.this, MainActivity.class);
+                Intent intent1 = new Intent(edit_orders.this, OrderMainActivity.class);
                 startActivity(intent1);
             }
         });

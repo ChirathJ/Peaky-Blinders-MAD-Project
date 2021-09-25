@@ -17,13 +17,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
+public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder> {
 
     private Context context;
     private Activity activity;
     private ArrayList orderID, ItemName, Brand, Customer, Description, ReqDate;
 
-    public CustomAdapter(Context context, Activity activity, ArrayList orderID, ArrayList itemName, ArrayList brand, ArrayList customer, ArrayList description, ArrayList reqDate) {
+    public OrderAdapter(Context context, Activity activity, ArrayList orderID, ArrayList itemName, ArrayList brand, ArrayList customer, ArrayList description, ArrayList reqDate) {
         this.context = context;
         this.activity = activity;
         this.orderID = orderID;
@@ -36,15 +36,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.single_order, parent, false);
-        return new MyViewHolder(view);
+        return new OrderViewHolder(view);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+    public void onBindViewHolder(@NonNull final OrderViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.order_id_txt.setText(String.valueOf(orderID .get(position)));
         holder.order_CustomerName_txt.setText(String.valueOf(Customer.get(position)));
         holder.order_itemName_text.setText(String.valueOf(ItemName.get(position)));
@@ -75,12 +75,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         return orderID.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
+    class OrderViewHolder extends RecyclerView.ViewHolder {
 
         TextView order_id_txt, order_CustomerName_txt, order_itemName_text, reqDate_txt;
         LinearLayout mainLayout;
 
-        MyViewHolder(@NonNull View itemView) {
+        OrderViewHolder(@NonNull View itemView) {
             super(itemView);
             order_id_txt= itemView.findViewById(R.id.order_id_txt);
             order_CustomerName_txt= itemView.findViewById(R.id.customer_name_txt);

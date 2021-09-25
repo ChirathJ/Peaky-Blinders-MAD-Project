@@ -57,7 +57,7 @@ public class add_orders extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v2) {
-                Intent intent1 = new Intent(add_orders.this, MainActivity.class);
+                Intent intent1 = new Intent(add_orders.this, OrderMainActivity.class);
                 startActivity(intent1);
             }
         });

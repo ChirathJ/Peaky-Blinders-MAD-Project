@@ -19,7 +19,7 @@
             android:name=".add_orders"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".OrderMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
