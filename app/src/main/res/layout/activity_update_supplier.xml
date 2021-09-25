@@ -316,6 +316,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageButton
+            android:id="@+id/stock"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
@@ -327,6 +328,7 @@
             android:src="@drawable/stand" />
 
         <ImageButton
+            android:id="@+id/cus"
             android:layout_width="56dp"
             android:layout_height="55dp"
             android:layout_gravity="center_vertical"
@@ -338,6 +340,7 @@
             android:src="@drawable/rating" />
 
         <ImageButton
+            android:id="@+id/order"
             android:layout_width="54dp"
             android:layout_height="52dp"
             android:layout_gravity="center_vertical"
@@ -349,6 +352,7 @@
             android:src="@drawable/order" />
 
         <ImageButton
+            android:id="@+id/sup"
             android:layout_width="52dp"
             android:layout_height="54dp"
             android:layout_gravity="center_vertical"

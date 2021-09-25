@@ -384,6 +384,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageButton
+                android:id="@+id/stock"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
@@ -395,6 +396,7 @@
                 android:contentDescription="@string/stock" />
 
             <ImageButton
+                android:id="@+id/cus"
                 android:layout_width="56dp"
                 android:layout_height="55dp"
                 android:layout_gravity="center_vertical"
@@ -406,6 +408,7 @@
                 android:contentDescription="@string/customer" />
 
             <ImageButton
+                android:id="@+id/order"
                 android:layout_width="54dp"
                 android:layout_height="52dp"
                 android:layout_gravity="center_vertical"
@@ -417,6 +420,7 @@
                 android:contentDescription="@string/orders" />
 
             <ImageButton
+                android:id="@+id/sup"
                 android:layout_width="52dp"
                 android:layout_height="54dp"
                 android:layout_gravity="center_vertical"
