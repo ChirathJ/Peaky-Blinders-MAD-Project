@@ -34,7 +34,7 @@
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/previous"
+            app:srcCompat="@drawable/previousc"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <TextView
@@ -296,7 +296,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="end"
                         android:layout_weight="1.0"
-                        android:src="@drawable/edit"
+                        android:src="@drawable/editc"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:background="@null"
@@ -321,7 +321,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="start"
                         android:layout_weight="1.0"
-                        android:src="@drawable/bin"
+                        android:src="@drawable/binc"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:background="@null"
