@@ -32,7 +32,7 @@
     <string name="Stock_Details_Name_data">Milk</string>
     <string name="Stock_Details_Name">Name:</string>
     <string name="Stock_Details_StockID_data">A00021</string>
-    <string name="Stock_Details_StockID">Stock ID:</string>
+    <string name="Stock_Details_StockID">Product ID:</string>
     <string name="stock_details">Product Details</string>
     <string name="stock">Product</string>
     <string name="customer">Customer</string>

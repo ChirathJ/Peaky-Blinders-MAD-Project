@@ -94,7 +94,7 @@ public class DetailsStock extends AppCompatActivity {
         cus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(DetailsStock.this, Home.class);
+                Intent intent1 = new Intent(DetailsStock.this, CustomerMainActivity.class);
                 startActivity(intent1);
             }
         });
@@ -102,7 +102,7 @@ public class DetailsStock extends AppCompatActivity {
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(DetailsStock.this, Home.class);
+                Intent intent1 = new Intent(DetailsStock.this, OrderMainActivity.class);
                 startActivity(intent1);
             }
         });
@@ -110,7 +110,7 @@ public class DetailsStock extends AppCompatActivity {
         sup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                Intent intent1 = new Intent(DetailsStock.this, Home.class);
+                Intent intent1 = new Intent(DetailsStock.this, SupplierMainActivity.class);
                 startActivity(intent1);
             }
         });
