@@ -11,6 +11,9 @@ Order details can be managed efficiently through the app. Users can add order de
 There are four main functionalities we identified in this system.
 
 •	Product management
+
 •	Customer management
+
 •	Order management
+
 •	Supplier management
