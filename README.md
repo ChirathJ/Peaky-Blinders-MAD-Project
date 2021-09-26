@@ -1,5 +1,6 @@
 # Peaky-Blinders-MAD-Project
 Inventory Management Android App
+
 Introduction to the project
 
 With the Corona pandemic, the world has been switching towards a virtual community to continue the daily procedures. The "Anything" app provides a valuable opportunity for all the users by taking inventory management to their fingertips. This mobile app can be used for inventory management in various fields such as food, beverages, clothes, pharmaceuticals, cleaning products, baby products, and chemicals, etc. Since this is not confined to a particular geographical location, it can be used for inventory management worldwide. This encourages the users to proceed with their business activities while expanding their horizons to global markets. It also creates a good chance to thrive during a time of crisis, because the functionalities can be performed by staying indoors, without the risk of the pandemic. 
